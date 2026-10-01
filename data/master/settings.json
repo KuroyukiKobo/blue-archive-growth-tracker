@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "region": "JP",
+  "locale": "ja-JP",
+  "verifiedAt": "2026-10-02",
+  "maxSenseiLevel": 90,
+  "maxCharacterStarGrade": 5,
+  "bondRankCapsByStarGrade": {
+    "1": 10,
+    "2": 10,
+    "3": 20,
+    "4": 30,
+    "5": 100
+  },
+  "equipmentSlotUnlockLevels": [1, 10, 20],
+  "abilityReleaseRequirement": {
+    "characterLevel": 90,
+    "starGrade": 5
+  },
+  "favoriteItemRequirements": {
+    "equipBondRank": 15,
+    "tier2BondRank": 20
+  },
+  "sources": [
+    "https://kamigame.jp/bluearchive/page/142932339821927927.html",
+    "https://kamigame.jp/bluearchive/page/143074853681932278.html"
+  ]
+}

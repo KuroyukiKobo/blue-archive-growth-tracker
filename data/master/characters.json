@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "region": "JP",
+  "locale": "ja-JP",
+  "verifiedAt": "2026-10-02",
+  "sources": [
+    "https://schaledb.com/student/aru",
+    "https://kamigame.jp/bluearchive/page/143077002490962129.html",
+    "https://kamigame.jp/bluearchive/page/240642042261196836.html"
+  ],
+  "characters": [
+    {
+      "id": "aru",
+      "name": "アル",
+      "initialStarGrade": 3,
+      "variantGroupId": "aru",
+      "skills": [
+        {
+          "id": "aru-ex",
+          "type": "ex",
+          "name": "ハードボイルドショット",
+          "maxLevel": 5
+        },
+        {
+          "id": "aru-normal",
+          "type": "normal",
+          "name": "ノワールシュート",
+          "maxLevel": 10
+        },
+        {
+          "id": "aru-passive",
+          "type": "passive",
+          "name": "社長の威厳",
+          "maxLevel": 10
+        },
+        {
+          "id": "aru-sub",
+          "type": "sub",
+          "name": "アウトローの流儀",
+          "maxLevel": 10
+        }
+      ],
+      "wbAttributes": [
+        {
+          "id": "aru-wb-max-hp",
+          "name": "最大HP",
+          "maxLevel": 25
+        },
+        {
+          "id": "aru-wb-attack",
+          "name": "攻撃力",
+          "maxLevel": 25
+        },
+        {
+          "id": "aru-wb-heal-power",
+          "name": "治癒力",
+          "maxLevel": 25
+        }
+      ],
+      "equipmentSlots": [
+        {
+          "id": "aru-equipment-slot-1",
+          "equipmentTypeId": "hat",
+          "unlockedAtLevel": 1
+        },
+        {
+          "id": "aru-equipment-slot-2",
+          "equipmentTypeId": "hairpin",
+          "unlockedAtLevel": 10
+        },
+        {
+          "id": "aru-equipment-slot-3",
+          "equipmentTypeId": "watch",
+          "unlockedAtLevel": 20
+        }
+      ],
+      "hasUniqueWeapon": true,
+      "favoriteItem": {
+        "id": "aru-favorite-item",
+        "name": "埋蔵金の地図",
+        "maxTier": 2
+      }
+    }
+  ]
+}

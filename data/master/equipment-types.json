@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "region": "JP",
+  "locale": "ja-JP",
+  "verifiedAt": "2026-10-02",
+  "source": "https://kamigame.jp/bluearchive/page/142382176657267643.html",
+  "equipmentTypes": [
+    { "id": "hat", "name": "帽子" },
+    { "id": "gloves", "name": "グローブ" },
+    { "id": "shoes", "name": "シューズ" },
+    { "id": "bag", "name": "バッグ" },
+    { "id": "badge", "name": "バッジ" },
+    { "id": "hairpin", "name": "ヘアピン" },
+    { "id": "amulet", "name": "お守り" },
+    { "id": "watch", "name": "腕時計" },
+    { "id": "necklace", "name": "ネックレス" }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kuroyukikobo:checker:schemas:character-master",
+  "title": "Blue Archive Character Master",
+  "type": "object",
+  "required": ["schemaVersion", "region", "locale", "verifiedAt", "sources", "characters"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "region": { "type": "string", "minLength": 1 },
+    "locale": { "type": "string", "minLength": 2 },
+    "verifiedAt": { "type": "string", "format": "date" },
+    "sources": { "type": "array", "items": { "type": "string", "format": "uri" }, "minItems": 1 },
+    "characters": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/character" }
+    }
+  },
+  "$defs": {
+    "skill": {
+      "type": "object",
+      "required": ["id", "type", "name", "maxLevel"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "enum": ["ex", "normal", "passive", "sub"] },
+        "name": { "type": "string", "minLength": 1 },
+        "maxLevel": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "wbAttribute": {
+      "type": "object",
+      "required": ["id", "name", "maxLevel"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "maxLevel": { "const": 25 }
+      },
+      "additionalProperties": false
+    },
+    "equipmentSlot": {
+      "type": "object",
+      "required": ["id", "equipmentTypeId", "unlockedAtLevel"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "equipmentTypeId": { "type": "string", "minLength": 1 },
+        "unlockedAtLevel": { "enum": [1, 10, 20] }
+      },
+      "additionalProperties": false
+    },
+    "character": {
+      "type": "object",
+      "required": ["id", "name", "initialStarGrade", "variantGroupId", "skills", "wbAttributes", "equipmentSlots", "hasUniqueWeapon"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "initialStarGrade": { "type": "integer", "minimum": 1, "maximum": 3 },
+        "variantGroupId": { "type": "string", "minLength": 1 },
+        "skills": { "type": "array", "items": { "$ref": "#/$defs/skill" }, "minItems": 1 },
+        "wbAttributes": { "type": "array", "items": { "$ref": "#/$defs/wbAttribute" }, "minItems": 3, "maxItems": 3 },
+        "equipmentSlots": { "type": "array", "items": { "$ref": "#/$defs/equipmentSlot" }, "minItems": 3, "maxItems": 3 },
+        "hasUniqueWeapon": { "type": "boolean" },
+        "favoriteItem": {
+          "type": "object",
+          "required": ["id", "name", "maxTier"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "name": { "type": "string", "minLength": 1 },
+            "maxTier": { "const": 2 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
